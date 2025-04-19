@@ -5,12 +5,12 @@
 const Pokedex = ({ pokemon }) => {
   return (
     <div>
-      <h1>Title</h1>
+      <h1>Pokedex</h1>
       <div className="poke-container">
         {
           pokemon.map(character => {
             return (
-              <Pokecard name={character.name} type={character.type} exp={character.base_experience} key={character.id} id={character.id}/>
+              <Pokecard name={character.name} type={character.type} exp={character.base_experience} id={character.id} key={character.id} />
             )
           })
         }

@@ -1,5 +1,6 @@
 h1 {
   text-align: center;
+  color: rgb(141, 141, 141);
 }
 
 .poke-container {
@@ -14,15 +15,15 @@ h1 {
 .poke-block {
   text-align: center;
   border-radius: 10%;  
-  height: 9rem;
-  background-color: rgb(213, 213, 213);
+  height: 10rem;
+  background-color: rgba(213, 213, 213, 0.77);
 }
 
 .name {
   color: blue;
   font-weight: bold;
   position: relative;
-  top: 5px;
+  top: 1rem;
 }
 
 .info {
