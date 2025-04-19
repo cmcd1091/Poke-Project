@@ -2,14 +2,15 @@
 
 // Use the defaultProps feature of ***Pokedex*** to provide a default list of Pokemon characters to show. You can use this list for a good set of defaults:
 
-const Pokedex = ( {pokemon} ) => {
+const Pokedex = ({ pokemon }) => {
   return (
     <div>
+      <h1>Title</h1>
       <div className="poke-container">
         {
           pokemon.map(character => {
             return (
-              <Pokecard name={character.name} type={character.type} exp={character.base_experience}/>
+              <Pokecard name={character.name} type={character.type} exp={character.base_experience} key={character.id} id={character.id}/>
             )
           })
         }

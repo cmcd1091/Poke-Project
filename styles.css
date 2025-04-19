@@ -1,18 +1,31 @@
+h1 {
+  text-align: center;
+}
+
 .poke-container {
-  background-color: rgb(180, 180, 255);
   margin-left: auto;
   margin-right: auto;
   display: grid;
-  grid-template-columns: auto auto auto auto;
+  grid-template-columns: repeat(4, 1fr);
   row-gap: 50px;
-  column-gap: 50px;
-  padding: 0;
-  
+  column-gap: 50px;  
 }
 
 .poke-block {
   text-align: center;
-  border: 1px solid black;
+  border-radius: 10%;  
   height: 9rem;
-  background-color: rgb(216, 216, 216);
+  background-color: rgb(213, 213, 213);
+}
+
+.name {
+  color: blue;
+  font-weight: bold;
+  position: relative;
+  top: 5px;
+}
+
+.info {
+  position: relative;
+  bottom: 1rem;
 }
