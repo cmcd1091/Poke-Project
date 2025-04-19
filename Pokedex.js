@@ -2,8 +2,24 @@
 
 // Use the defaultProps feature of ***Pokedex*** to provide a default list of Pokemon characters to show. You can use this list for a good set of defaults:
 
+const Pokedex = ( {pokemon} ) => {
+  return (
+    <div>
+      <div className="poke-container">
+        {
+          pokemon.map(character => {
+            return (
+              <Pokecard name={character.name} type={character.type} exp={character.base_experience}/>
+            )
+          })
+        }
+      </div>
+    </div>
+  )
+}
+
 Pokedex.defaultProps = {
-  items: [
+  pokemon: [
   {id: 4, name: 'Charmander', type: 'fire', base_experience: 62},
   {id: 7, name: 'Squirtle', type: 'water', base_experience: 63},
   {id: 11, name: 'Metapod', type: 'bug', base_experience: 72},
@@ -12,24 +28,5 @@ Pokedex.defaultProps = {
   {id: 39, name: 'Jigglypuff', type: 'normal', base_experience: 95},
   {id: 94, name: 'Gengar', type: 'poison', base_experience: 225},
   {id: 133, name: 'Eevee', type: 'normal', base_experience: 65}
-]}
-
-
-
-const Pokedex = (items) => {
-  return (
-    <div>
-      {
-      Pokemon.map(items => {
-        return(
-          <p>{items.name}</p>
-        )
-      })
-      }
-    </div>
-    
-
-
-
-  )
+  ]
 }
